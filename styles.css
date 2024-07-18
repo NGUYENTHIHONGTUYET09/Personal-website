@@ -326,3 +326,84 @@ footer {
 .open-chat-button:hover {
     background-color: #1e8f67;
 }
+
+/*thanh thông báo trên cùng*/
+/* CSS for notification bar and icon */
+#notification-bar {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    z-index: 1000;
+    background-color: #64a1d6; /* Màu nền của thanh thông báo */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(219, 140, 140, 0.1);
+}
+
+#notification-icon {
+    width: 30px; /* Độ rộng của icon */
+    height: 30px; /* Chiều cao của icon */
+    cursor: pointer;
+}
+
+/*thanh menu trên cùng*/
+#notification-bar {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    z-index: 1000;
+    background-color: #64a1d6; /* Màu nền của thanh thông báo */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(219, 140, 140, 0.1);
+    display: flex;
+    align-items: center; /* Căn giữa các mục theo chiều dọc */
+}
+
+#notification-bar .menu-items {
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa các mục */
+}
+
+#notification-bar .menu-items a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px;
+}
+
+
+/*thanh bên trái màn hình*/
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; /* Độ rộng của thanh bên trái */
+    height: 100%; /* Chiều cao lấp đầy màn hình */
+    background-color: #333; /* Màu nền của thanh bên trái */
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.avatar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avatar img {
+    width: 100px; /* Kích thước avatar */
+    height: 100px;
+    border-radius: 50%; /* Bo tròn viền avatar */
+}
+
+.personal-info {
+    text-align: left;
+}
+
+.personal-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.personal-info p {
+    margin-bottom: 5px;
+}
