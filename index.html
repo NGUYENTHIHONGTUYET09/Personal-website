@@ -49,8 +49,32 @@
             cursor: pointer;
         }
     </style>
+<!-----------KHUNG CHAT MINI VÀ GIAO DIỆN BÊN TRONG NÓ  -->
 
+<!------------------------------------------------->
 
+<!-- JavaScript for closing chat widget -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const closeChatButtons = document.querySelectorAll('.close-button');
+        const chatWidget = document.querySelector('.chat-widget-container');
+
+        // Close chat on close button click
+        closeChatButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                chatWidget.style.display = 'none';
+            });
+        });
+
+        // Close chat on ESC key press
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                chatWidget.style.display = 'none';
+            }
+        });
+    });
+</script>
+<!---->
 </head>
 <body>
     <header>
@@ -72,12 +96,8 @@
         </nav>
     ----------->
 
-  
-    
-
-
-        <h1>Welcome to My Personal Webpage</h1>
-        <p>Hello, I'm Tuyet.</p>
+         
+        '<p>Hello, I'm Tuyet. Welcome to My Personal Webpage!.</p>
     </header>
     <main>
         <section id="about-me" class="content-section">
@@ -149,15 +169,15 @@
         <!--thanh bên trái màn hình-->
         <div class="sidebar">
             <div class="avatar">
-                <img src="avatar.jpg" alt="Avatar">
+                <img src="image/avatar.jpg" alt="Avatar">
             </div>
             <div class="personal-info">
-                <h4>Your Name</h4>
-                <h5>
+                <h4>HONG TUYET</h4>
+                <h6>
                     <p>Address: TP Hồ Chí Minh</p>
                     <p>Phone: 0396******</p>
-                    <p>School: University of Information Technology</p>
-                </h5>
+                    <p>School: University of Information Technology (UIT)</p>
+                </h6>
             </div>
         </div>
         
@@ -165,20 +185,32 @@
         
 
 <!-- Chat widget button -->
-<button id="chat-widget-button" onclick="toggleChatWidget()">Chat with us</button>
+<button id="chat-widget-button">Chat with us</button>
 
-<!-- Chat widget container -->
-<!-- Chat widget container -->
-<div id="chat-widget-container">
-    <button class="close-button" onclick="toggleChatWidget()">&times;</button>
-    <div id="chat-messages">
-        <!-- Chat messages will be displayed here -->
+<!-- Initial chat widget container -->
+<div id="initial-chat-widget" class="chat-widget-container">
+    <div class="chat-header">
+        <h2 class="chat-title">Chat with Tuyet</h2>
+        <button class="close-button" onclick="toggleChatWidget()">&times;</button>
     </div>
-    <div id="chat-input">
-        <input type="text" id="message-input" placeholder="Type your message...">
-        <button id="send-message-button">Send</button>
+    <div class="chat-messages" id="chat-messages">
+        <!-- Example chat messages -->
+        <div class="message sent">
+            <img src="image/avatar1.jpg" alt="Avatar" class="avatar-left">
+            <p>Hello! How can I help you today?</p>
+        </div>
+        <div class="message received">
+            <img src="image/avatar2.jpg" alt="Avatar" class="avatar-right">
+            <p>Hi! I have a question about your services.</p>
+        </div>
+    </div>
+    <div class="chat-input">
+        <input type="text" class="message-input" id="message-input" placeholder="Type your message...">
+        <button class="send-message-button" id="send-message-button">Send</button>
     </div>
 </div>
+
+
 
 
 </main>
