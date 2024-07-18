@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuyet's Personal Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    
+
+    <style>
+        /* CSS styles for the chat widget button and container */
+        #chat-widget-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #28b487;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #chat-widget-container {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            z-index: 1000;
+        }
+
+        /* Close button styles */
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: #333;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to My Personal Webpage</h1>
+        <p>Hello, I'm Tuyet.</p>
+    </header>
+    <main>
+        <section id="about-me" class="content-section">
+            <h2>About Me</h2>
+            <p>I am a [Your Profession/Field] with a passion for [Your Interests]. I have experience in [Briefly Describe Your Experience].</p>
+        </section>
+        <section id="skills" class="content-section">
+            <h2>Skills</h2>
+            <p align="center">
+                <img src="https://img.icons8.com/color/48/000000/microsoft-sql-server.png" alt="SQL Server" width="48" height="48"/> 
+                <img src="https://img.icons8.com/color/48/000000/visual-studio-code-2019.png" alt="Visual Studio Code" width="48" height="48"/>
+                <img src="https://img.icons8.com/color/48/null/visual-studio--v2.png" alt="Visual Studio" width="48" height="48"/>
+                <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java" width="48" height="48"/>
+                <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" width="48" height="48"/>
+                <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" width="48" height="48"/>
+                <img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++" width="48" height="48"/>
+                <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git" width="48" height="48"/>
+                <img src="https://img.icons8.com/fluent/48/000000/github.png" alt="GitHub" width="48" height="48"/>
+                <img src="https://img.icons8.com/dusk/48/000000/anaconda.png" alt="Anaconda" width="48" height="48"/>
+                <img src="https://img.icons8.com/fluent/48/000000/spyder-ide.png" alt="Spyder" width="48" height="48"/>
+                <img src="https://img.icons8.com/color/48/000000/trello.png" alt="Trello" width="48" height="48"/>
+            </p>
+        </section>
+        <section id="contact" class="content-section">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:nguyenthihongtuyet04@gmail.com">Email</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/nguyen-thi-hong-tuyet-106058318/" target="_blank">Linkedin</a></p>
+            <p>Facebook: <a href="https://www.facebook.com/profile.php?id=100015667711831" target="_blank">Facebook</a></p>
+            <p>Github: <a href="https://github.com/NGUYENTHIHONGTUYET09" target="_blank">Github</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/htu_wh_.%20_/" target="_blank">Instagram</a></p>
+            <p>YouTube: <a href="https://www.youtube.com/channel/UCeDO_8s-Hh1QEKFVwbxalZw" target="_blank">YouTube</a></p>
+
+            <p align="center">
+                <a href="https://www.linkedin.com/in/nguyen-thi-hong-tuyet-106058318/" target="_blank">
+                  <img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100015667711831" alt="Facebook">
+                  <img src="https://img.icons8.com/fluent/48/000000/facebook-new.png" target="_blank" />
+                </a> 
+                <a href="https://github.com/NGUYENTHIHONGTUYET09" alt="Github">
+                  <img src="https://img.icons8.com/fluent/48/000000/github.png"/>
+                </a> 
+                <a href="https://www.youtube.com/channel/UCeDO_8s-Hh1QEKFVwbxalZw" alt="Youtube channel" target="_blank" >
+                  <img src="https://img.icons8.com/fluent/48/000000/youtube-play.png"/>
+                </a>
+                 <a href="https://www.kaggle.com/" target="_blank" alt="Kaggle">
+                  <img src="https://img.icons8.com/windows/48/000000/kaggle.png"/>
+                    </a>
+                <a href="https://www.hackerrank.com/profile/nguyenthihongtu2" alt="HackerRank" target="_blank">
+                  <img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-hackerrank-is-a-technology-company-that-focuses-on-competitive-programming-logo-shadow-tal-revivo.png" />
+                </a>
+                <a href="mailto:nguyenthihongtuyet004@gmail.com" alt="Email">
+                  <img src="https://img.icons8.com/fluent/48/000000/mailing.png"/>
+                </a>
+              </p>
+              
+        </section>
+
+        <section id="My Story" class="content-section">
+            <h2>My Story</h2>
+            <li>Education</li>
+            <li>Experience</li>
+        </section>
+
+        <button id="greet-button">Click me for a Greeting!</button>
+        <p id="greeting-message"></p>
+
+        
+
+
+<!-- Chat widget button -->
+<button id="chat-widget-button" onclick="toggleChatWidget()">Chat with us</button>
+
+<!-- Chat widget container -->
+<div id="chat-widget-container">
+    <button class="close-button" onclick="toggleChatWidget()">&times;</button>
+    <div id="chat-messages">
+        <!-- Chat messages will be displayed here -->
+    </div>
+    <div id="chat-input">
+        <input type="text" id="message-input" placeholder="Type your message...">
+    </div>
+    <button id="send-message-button">Send</button>
+</div>
+
+</main>
+
+<footer>
+<p>&copy; 2024 Tuyet. All rights reserved.</p>
+<p><a href="http://NTHT09">Visit My Website</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
