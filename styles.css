@@ -1,3 +1,4 @@
+/*------end--------------------*/
 /* Basic Reset */
 * {
     margin: 0;
@@ -744,19 +745,19 @@ footer {
 #sidebar {
     position: fixed;
     top: 90px;
-    right: 20px;
-    width: 320px; /* Adjust width as needed */
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    right: 10px;
+    width: 270px; /* Adjust width as needed */
+    background-color: hsl(83, 93%, 58%);
+    border: 1px solid #ff08d2;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    box-shadow: 0 0 10px rgba(24, 196, 24, 0.1);
+    padding: 10px;
     z-index: 1000;
 }
 
 /* Style for the article posting section */
 #post-article {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #article-input {
@@ -770,7 +771,7 @@ footer {
 
 #post-article-button {
     background-color: #28b487;
-    color: #fff;
+     color: #fff;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -852,4 +853,3 @@ footer {
 }
 
 /*------end--------------------*/
-
