@@ -736,3 +736,120 @@ footer {
 .chat-widget-container.show-chat {
     display: block;
 }
+
+
+/*------khung đăng bài viết -------*/
+/*------khung đăng bài viết -------*/
+/* CSS for the sidebar container */
+#sidebar {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    width: 320px; /* Adjust width as needed */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+}
+
+/* Style for the article posting section */
+#post-article {
+    margin-bottom: 20px;
+}
+
+#article-input {
+    width: calc(100% - 22px); /* Adjust width to fit within the sidebar */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#post-article-button {
+    background-color: #28b487;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+#post-article-button:hover {
+    background-color: #1e9241;
+}
+
+/* Style for displaying articles */
+#articles {
+    max-height: 400px; /* Adjust height as needed */
+    overflow-y: auto;
+}
+
+.article {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.article h3 {
+    margin-top: 0;
+}
+ /*-------------
+ /*--------------enđ---------------------*/
+
+
+ /*thanh trượt kéo bài đăng NGANG dọc */
+ /* Slider container */
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Slider content */
+.slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.slider-content {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.article {
+    flex: 0 0 auto;
+    width: 300px; /* Set the width of each article */
+    margin-right: 10px;
+}
+
+/* Navigation buttons */
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
+}
+
+/*------end--------------------*/
+
