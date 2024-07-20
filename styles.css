@@ -10,12 +10,16 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #0f8ad6; /* Màu xanh dương */
+    background-image: url('image/anhNen.jpg'); /* Đường dẫn đến ảnh nền */
+    background-size: cover; /* Đảm bảo ảnh phủ toàn bộ nền */
+    background-position: center; /* Đặt ảnh ở giữa */
+    background-repeat: no-repeat; /* Không lặp lại ảnh nền */
     color: #333;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
+
 
 /* Header Styles */
 header {
