@@ -173,7 +173,7 @@ footer {
     background: rgba(210, 190, 190, 0.7); /* Semi-transparent background */
     color: #fff;
 }
-
+/**/
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     nav ul {
