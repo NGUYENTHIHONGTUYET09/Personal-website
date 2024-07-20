@@ -58,6 +58,19 @@
         .delete-button:hover {
             background-color: #ff1a1a;
         }
+
+        #sidebar {
+            position: fixed;
+            top: 90px;
+            right: 10px;
+            width: 270px; /* Adjust width as needed */
+            background-color: hsl(83, 93%, 58%);
+            border: 1px solid #ff08d2;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(24, 196, 24, 0.1);
+            padding: 10px;
+            z-index: 1000;
+        }
     </style>
     <!--===========the end=======-->
 
@@ -101,6 +114,8 @@
                 <a href="#about-me">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
+                <a href="#achievement">Achievement</a>
+
             </div>
         </div>
         <!------------
@@ -191,27 +206,36 @@
             <li>Experience</li>
         </section>
 
-        <!------------------tạo khung đăng bài-------------->
-        <!-- Sidebar for posting and displaying articles -->
-        <div id="sidebar">
-            <!-- Section for posting articles -->
-            <section id="post-article">
-                <h3>Post an Article</h3>
-                <textarea id="article-input" placeholder="Write your article here..." rows="6" cols="30"></textarea>
-                <button id="post-article-button">Post </button>
-            </section>
-
-            <!-- Section to display posted articles -->
-            <section id="articles">
-                <h3>Articles</h3>
-                <div id="article-list"></div>
-            </section>
+        <section id ="Achievement" class= "Achievement">
+            <h2> Achievement</h2>
+            <li></li>
+            <li></li>
+            <li></li>
+        </section>
 
 
+      <!------------------tạo khung đăng bài-------------->
+      <div id="sidebar">
+        <!-- Section for posting articles -->
+        <section id="post-article">
+            <h4>Hãy để lại lời nhắn cho tớ nếu bạn muốn nhé!</h4>
+            <input id="title-input" placeholder="Title of your article" /><br>
+            <textarea id="article-input" placeholder="Write your article here..." rows="6" cols="30"></textarea>
+            <button id="post-article-button">Post</button>
+        </section>
 
-        </div>
+        <!-- Section to display posted articles -->
+        <section id="articles">
+            <h3>Lời nhắn🔔</h3>
+            <div id="article-list"></div>
+        </section>
+    </div>
+
+
+
         <!------------------------------------------------->
 
+ <!---=======================THE END  ----------------->
 
         <!--thanh trượt kéo bài đăng-->
 

@@ -49,101 +49,103 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // khung đăng bài ---------------------------------
-document.addEventListener('DOMContentLoaded', function() {
-    // Get elements
-    const postArticleButton = document.getElementById('post-article-button');
-    const articleInput = document.getElementById('article-input');
-    const articleList = document.getElementById('article-list');
+ document.addEventListener('DOMContentLoaded', function() {
+            // Get elements
+            const postArticleButton = document.getElementById('post-article-button');
+            const titleInput = document.getElementById('title-input');
+            const articleInput = document.getElementById('article-input');
+            const articleList = document.getElementById('article-list');
 
-    // Load articles from LocalStorage
-    loadArticles();
+            // Load articles from LocalStorage
+            loadArticles();
 
-    // Add event listener to the post article button
-    postArticleButton.addEventListener('click', function() {
-        const articleText = articleInput.value.trim();
+            // Add event listener to the post article button
+            postArticleButton.addEventListener('click', function() {
+                const articleTitle = titleInput.value.trim();
+                const articleText = articleInput.value.trim();
 
-        if (articleText) {
-            // Create a new article element
-            const articleElement = document.createElement('div');
-            articleElement.classList.add('article');
-            articleElement.innerHTML = `
-                <h3>Article ${Date.now()}</h3>
-                <p>${articleText}</p>
-                <button class="delete-button">Delete</button>
-            `;
+                if (articleTitle && articleText) {
+                    // Create a new article element
+                    const articleElement = document.createElement('div');
+                    articleElement.classList.add('article');
+                    articleElement.innerHTML = `
+                        <h3>${articleTitle}</h3>
+                        <p>${articleText}</p>
+                        <button class="delete-button">Delete</button>
+                    `;
 
-            // Add the new article to the article list
-            articleList.appendChild(articleElement);
+                    // Add the new article to the article list
+                    articleList.appendChild(articleElement);
 
-            // Save the article to LocalStorage
-            saveArticle(articleText);
+                    // Save the article to LocalStorage
+                    saveArticle(articleTitle, articleText);
 
-            // Clear the input field
-            articleInput.value = '';
+                    // Clear the input fields
+                    titleInput.value = '';
+                    articleInput.value = '';
 
-            // Add event listener to the delete button
-            addDeleteEventListener(articleElement.querySelector('.delete-button'));
-        }
-    });
+                    // Add event listener to the delete button
+                    addDeleteEventListener(articleElement.querySelector('.delete-button'));
+                }
+            });
 
-    // Function to save articles to LocalStorage
-    function saveArticle(articleText) {
-        // Get existing articles from LocalStorage
-        let articles = JSON.parse(localStorage.getItem('articles')) || [];
+            // Function to save articles to LocalStorage
+            function saveArticle(title, text) {
+                // Get existing articles from LocalStorage
+                let articles = JSON.parse(localStorage.getItem('articles')) || [];
 
-        // Add new article to the list
-        articles.push(articleText);
+                // Add new article to the list
+                articles.push({ title, text });
 
-        // Save the updated list back to LocalStorage
-        localStorage.setItem('articles', JSON.stringify(articles));
-    }
+                // Save the updated list back to LocalStorage
+                localStorage.setItem('articles', JSON.stringify(articles));
+            }
 
-    // Function to load articles from LocalStorage and display them
-    function loadArticles() {
-        // Get articles from LocalStorage
-        let articles = JSON.parse(localStorage.getItem('articles')) || [];
+            // Function to load articles from LocalStorage and display them
+            function loadArticles() {
+                // Get articles from LocalStorage
+                let articles = JSON.parse(localStorage.getItem('articles')) || [];
 
-        // Add each article to the article list
-        articles.forEach(articleText => {
-            const articleElement = document.createElement('div');
-            articleElement.classList.add('article');
-            articleElement.innerHTML = `
-                <h3>Article ${Date.now()}</h3>
-                <p>${articleText}</p>
-                <button class="delete-button">Delete</button>
-            `;
-            articleList.appendChild(articleElement);
+                // Add each article to the article list
+                articles.forEach(({ title, text }) => {
+                    const articleElement = document.createElement('div');
+                    articleElement.classList.add('article');
+                    articleElement.innerHTML = `
+                        <h3>${title}</h3>
+                        <p>${text}</p>
+                        <button class="delete-button">Delete</button>
+                    `;
+                    articleList.appendChild(articleElement);
 
-            // Add event listener to the delete button
-            addDeleteEventListener(articleElement.querySelector('.delete-button'));
+                    // Add event listener to the delete button
+                    addDeleteEventListener(articleElement.querySelector('.delete-button'));
+                });
+            }
+
+            // Function to add delete event listener to a button
+            function addDeleteEventListener(button) {
+                button.addEventListener('click', function() {
+                    const articleElement = this.parentElement;
+                    const articleTitle = articleElement.querySelector('h3').innerText;
+                    const articleText = articleElement.querySelector('p').innerText;
+
+                    // Remove the article from the DOM
+                    articleElement.remove();
+
+                    // Remove the article from LocalStorage
+                    removeArticle(articleTitle, articleText);
+                });
+            }
+
+            // Function to remove an article from LocalStorage
+            function removeArticle(title, text) {
+                // Get existing articles from LocalStorage
+                let articles = JSON.parse(localStorage.getItem('articles')) || [];
+
+                // Remove the article from the list
+                articles = articles.filter(article => article.title !== title || article.text !== text);
+
+                // Save the updated list back to LocalStorage
+                localStorage.setItem('articles', JSON.stringify(articles));
+            }
         });
-    }
-
-    // Function to add delete event listener to a button
-    function addDeleteEventListener(button) {
-        button.addEventListener('click', function() {
-            const articleElement = this.parentElement;
-            const articleText = articleElement.querySelector('p').innerText;
-
-            // Remove the article from the DOM
-            articleElement.remove();
-
-            // Remove the article from LocalStorage
-            removeArticle(articleText);
-        });
-    }
-
-    // Function to remove an article from LocalStorage
-    function removeArticle(articleText) {
-        // Get existing articles from LocalStorage
-        let articles = JSON.parse(localStorage.getItem('articles')) || [];
-
-        // Remove the article from the list
-        articles = articles.filter(article => article !== articleText);
-
-        // Save the updated list back to LocalStorage
-        localStorage.setItem('articles', JSON.stringify(articles));
-    }
-});
-
-//-------------------------------------------------

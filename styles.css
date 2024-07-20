@@ -86,9 +86,18 @@ main {
     font-size: 1rem; /* Giảm kích thước chữ */
     margin-bottom: 0.2rem; /* Giảm khoảng cách dưới */
     line-height: 1.2; /* Giảm chiều cao dòng */
+    
 }
 
 .content-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #fff; /* Màu nền trắng cho mỗi section */
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.Achievement {
     margin-bottom: 2rem;
     padding: 1.5rem;
     border-radius: 8px;
@@ -125,7 +134,7 @@ ul li {
 }
 
 a {
-    color: #333;
+    color: #0d05f1;
     text-decoration: none;
 }
 
@@ -161,7 +170,7 @@ button:hover {
 footer {
     text-align: center;
     padding: 1rem 0;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    background: rgba(210, 190, 190, 0.7); /* Semi-transparent background */
     color: #fff;
 }
 
@@ -550,8 +559,8 @@ footer {
 /* Chat Header */
 .chat-header {
     background-color: #28b487;
-    color: #fff;
-    padding: 10px;
+    color: hsl(0, 0%, 100%);
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -567,7 +576,7 @@ footer {
 .close-button {
     background: none;
     border: none;
-    color: #01140a;
+    color: #1840d1;
     font-size: 2rem;
     cursor: pointer;
 }
@@ -654,7 +663,7 @@ footer {
 .chat-widget-container {
     display: none;
     position: fixed;
-    bottom: 20px;
+    bottom: 40px;
     right: 20px;
     width: 300px;
     height: 400px;
@@ -665,7 +674,7 @@ footer {
 }
 
 .chat-widget-container .chat-header {
-    padding: 10px;
+    padding: 1px;
     background-color: #7cc232;
     border-bottom: 1px solid #b18585;
     display: flex;
