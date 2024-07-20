@@ -46,6 +46,13 @@
             border-radius: 5px;
         }
 
+        .achievement-item img {
+            max-width: 300px;
+            max-height: 300px;
+            width: auto;
+            height: auto;
+        }
+
         .delete-button {
             background-color: #ff4c4c;
             border: none;
@@ -58,6 +65,23 @@
         .delete-button:hover {
             background-color: #ff1a1a;
         }
+/*đăng status image*/
+.like-button, .comment-button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5%;
+            margin-right: 5px;
+        }
+
+        .like-button:hover, .comment-button:hover {
+            background-color: #0056b3;
+        }
+/*---end---*/
+
+ 
 
         #sidebar {
             position: fixed;
@@ -205,24 +229,20 @@
             <li>Education</li>
             <li>Experience</li>
         </section>
-
-        <section id ="Achievement" class= "Achievement">
-            <h2> Achievement</h2>
-            <li></li>
-            <li></li>
-            <li></li>
-        </section>
+ 
 
 
-      <!------------------tạo khung đăng bài-------------->
+      <!------------------tạo khung đăng bài thanh ben phai man hinh-------------->
       <div id="sidebar">
         <!-- Section for posting articles -->
         <section id="post-article">
             <h4>Hãy để lại lời nhắn cho tớ nếu bạn muốn nhé!</h4>
-            <input id="title-input" placeholder="Title of your article" /><br>
+            <input id="title-input" placeholder="Your name" /><br>
             <textarea id="article-input" placeholder="Write your article here..." rows="6" cols="30"></textarea>
+            <input type="file" id="image-input" accept="image/*" /><br>
             <button id="post-article-button">Post</button>
         </section>
+
 
         <!-- Section to display posted articles -->
         <section id="articles">
@@ -230,9 +250,25 @@
             <div id="article-list"></div>
         </section>
     </div>
+<!--Đằng bài về thành tích có image-->
 
 
-
+    <section id="post-achievement" class="Achievement">
+        <h2>Post Achievement</h2>
+        <input type="text" id="achievement-title" placeholder="Title" /><br>
+        <textarea id="achievement-input" placeholder="Write your achievement here..." rows="6" cols="30"></textarea><br>
+        <input type="file" id="achievement-image" accept="image/*" />
+        <button id="post-achievement-button">Post Achievement</button>
+    </section>
+    
+    <section id="achievement-list">
+        <h3>Achievements</h3>
+        <ul id="achievement-list-ul"></ul>
+    </section>
+    
+<!-- đnagư bài thành tích-->
+ 
+ <!--the end-->
         <!------------------------------------------------->
 
  <!---=======================THE END  ----------------->
